@@ -66,8 +66,8 @@ begin
     if (playerX < 0) then
       playerX := 0;
     
-    ballX := ballX + kx;
-    ballY := ballY + ky;
+    ballX := ballX - kx;
+    ballY := ballY - ky;
     
     if ((ballX < 0) or (ballX > windowWidth - ball.Width)) then
       kx := -kx;
@@ -75,6 +75,7 @@ begin
       ky := -ky;
     
     ball.MoveTo(ballX, ballY);
+            Sleep(12);
     
     for i := 1 to 50 do
     begin
@@ -97,5 +98,5 @@ begin
     end;
     
   end;
-
+  
 end.
